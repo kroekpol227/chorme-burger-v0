@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome & Burger</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #ffc107;
+            color: #333;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #555;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        /* Menu Section */
+        #menu .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            margin-bottom: 10px;
+        }
+
+        .menu-item .price {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* About Us & Contact Section */
+        #about, #contact {
+            background: #fff;
+        }
+
+        #about p, #contact p {
+            max-width: 600px;
+            margin: 0 auto 1rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .social-links {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            header h1 {
+                margin-bottom: 1rem;
+            }
+
+            header nav ul {
+                padding-top: 10px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin: 5px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Chrome & Burger</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>The Best Burgers in Town</h2>
+                <p>Served with a Side of Chrome</p>
+                <a href="#menu" class="btn">View Our Menu</a>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h3>The Classic Chrome</h3>
+                        <p>A juicy beef patty with lettuce, tomato, onion, and our special sauce.</p>
+                        <p class="price">$10.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>V8 Veggie Burger</h3>
+                        <p>A delicious veggie patty with all the fixings. A healthy choice!</p>
+                        <p class="price">$9.99</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Spitfire Spicy Burger</h3>
+                        <p>Beef patty with jalapeños, pepper jack cheese, and spicy mayo.</p>
+                        <p class="price">$11.99</p>
+                    </div>
+                     <div class="menu-item">
+                        <h3>Double Decker Deluxe</h3>
+                        <p>Two beef patties, double cheese, bacon, and all the classic toppings.</p>
+                        <p class="price">$14.99</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Chrome & Burger started from a simple passion: a love for classic cars and amazing food. We believe in quality ingredients, simple recipes done right, and serving our community with a smile. Our food truck is more than just a place to eat; it's a tribute to timeless style and great taste.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Find us cruising around town! Follow our social media to see our daily location.</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> contact@chromeandburger.com</p>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chrome & Burger. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
